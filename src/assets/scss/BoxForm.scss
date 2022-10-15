@@ -1,0 +1,26 @@
+@import "./Settings.scss";
+
+.box-container {
+  border: 1px solid $gray-color;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 1.25rem 0;
+  box-shadow: $shadow;
+  .MuiPaper-root {
+    .MuiAccordionSummary-root {
+      border-bottom: none !important;
+      &.Mui-expanded {
+        border-top: none;
+      }
+    }
+  }
+  &__label {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+}

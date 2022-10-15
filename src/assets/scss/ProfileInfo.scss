@@ -1,0 +1,28 @@
+@import "./Settings.scss";
+.profile-info {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    grid-template-areas:
+      "image"
+      "title"
+      "info";
+  }
+  &__image {
+    grid-area: image;
+  }
+  &__info {
+    grid-area: info;
+  }
+  &__title {
+    grid-area: title;
+  }
+  @media (min-width: $breakpoints-sm) {
+    &__wrapper {
+      grid-template-areas:
+        "image title"
+        "image info";
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.leftmenu {
+  z-index: 1004;
+  background: #f8f8f8;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.13);
+  transition: all 0.2s cubic-bezier(0.6, 0.015, 0.49, 0.98);
+}
+.leftmenu .scroll-wrapper {
+  flex-grow: 1;
+  position: relative;
+  margin-top: 4px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.leftmenu .scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.leftmenu .notification {
+  width: 52px;
+  background: #f8f8f8;
+  box-shadow: 0 -5px 10px -5px rgba(0, 0, 0, 0.13);
+  transition: all 0.2s cubic-bezier(0.6, 0.015, 0.49, 0.98);
+}
+.leftmenu .control-panel {
+  position: relative;
+  background: #f8f8f8;
+}
+
+.leftmenu .menu,
+.leftmenu .submenu {
+  list-style: none;
+  padding-left: 0;
+}
+.leftmenu .submenu li {
+  width: 210px !important;
+  padding: 0;
+}
+
+.leftmenu li {
+  box-sizing: border-box;
+  width: 52px;
+  margin-top: 1px;
+  margin-bottom: 0;
+  padding: 0 5px;
+}
+.leftmenu li a {
+  display: flex;
+  align-items: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.leftmenu li a.module {
+  align-items: center;
+  padding: 6px 2px 6px 6px;
+}
+.leftmenu li a.module.active {
+  font-weight: 700;
+  background: #fbfbfb;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.13);
+}
+
+.leftmenu li a.module:hover {
+  background: #fbfbfb;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.13);
+  transition: all 0.2s cubic-bezier(0.6, 0.015, 0.49, 0.98);
+}
+
+.leftmenu li a.module .icon:nth-of-type(3) {
+  top: 0;
+}
+
+.leftmenu .text {
+  color: #666;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.6, 0.015, 0.49, 0.98);
+}
+
+.leftmenu.visible {
+  width: 100%;
+}
+.leftmenu.visible .separator {
+  border-bottom: 1px solid transparent;
+  width: 220px;
+}
+.leftmenu.visible .separator span.msgs-count {
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.6, 0.015, 0.49, 0.98);
+}
+.leftmenu.visible li {
+  width: 220px;
+}
+.leftmenu.visible .text {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.2s cubic-bezier(0.6, 0.015, 0.49, 0.98);
+}

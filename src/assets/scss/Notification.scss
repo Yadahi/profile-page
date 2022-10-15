@@ -1,0 +1,95 @@
+@import "./Settings.scss";
+$gray-border: #666666;
+
+.notification {
+  &__container {
+  }
+  &__header {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 0.5rem 0 1.5rem 0;
+    border-bottom: 1px solid $gray-color;
+    gap: 1.5rem;
+    .notification {
+      &__button {
+        border: 1px solid $gray-border;
+        font-size: 1rem;
+        color: #000;
+        padding: 0.75rem;
+        border-radius: 4px;
+        flex: 1;
+
+        text-align: center;
+        &--selected {
+          background-color: $primary-color;
+          color: #fff;
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &__section {
+    padding: 1rem 0;
+    border-bottom: 1px solid $gray-color;
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__days {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 0.75rem;
+  }
+  &__day {
+    border: 1px solid $gray-border;
+    font-size: 1rem;
+    color: #000;
+    padding: 0.75rem 0.5rem;
+    border-radius: 10px;
+    text-align: center;
+
+    &--selected {
+      background-color: $primary-color;
+      color: #fff;
+      border-color: $primary-color;
+    }
+  }
+
+  &__week {
+  }
+  &__select {
+    border-radius: 4px;
+    font-size: 1rem;
+    height: 2.5rem;
+    padding: 0 0.625em;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+  }
+  &__input {
+    border-radius: 4px;
+    font-size: 1rem;
+    height: 2.5rem;
+    padding: 0 0.625em;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+
+    &--number {
+      width: 5rem;
+    }
+  }
+  label {
+    display: contents;
+  }
+  h4 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
